@@ -53,6 +53,7 @@ I will structure the tests considering first a single interface at a time (movin
 - define a more business/E2E scenario with several different interface invoked in a single flow. Structure the test and validate several steps within the flow
 - Non functional testing (average resp/time of a specific service based on specific load settings....or evaluating an entire flow)
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 question b)
 i would exetend the answer given in a) with the difference that the mobile devices could be considered as part of cloud or can be simulated. The specific protocol layer (bluetooth) must be considered, but my approach overall would be similar as for the previous question.
 
