@@ -1,6 +1,6 @@
 # WB_CodeChallenge
 
-Part 1
+PART 1
 The folowing 3 classes were created to satisfy the requirements.
 findFirstRepeatedN
 pathChecker
@@ -36,4 +36,24 @@ Inserting short interspersed arrays expecting the result to be 0 ([1,0]) , or in
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-In general some questions and clarification , that can be discussion point within the interviewing process, could be done to limit and clarify the outcome and beavhiour of the functions requested and therefore leading the Unit tests creation.
+In general some questions and clarification , that can be discussion point within the interviewing process, could be done to limit and clarify the outcome and beavhiour of the functions requested and therefore leading the Unit tests creation. Pytest was used to create the specific tests and PyCharm as IDE. Python 3.10 was used.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+PART 2
+question a) 
+
+As we are speaking about the SIT in any case i would have access through the network on the cloud that will host specific services and methods (i expect RestAPI).
+Then , based on this services, i will define a plan on which part and scenarios to cover and replicate it by setting specific automated tests against these interfaces. I will also expect that the embedded part can be mocked and run on a machine connected through wifi on the network that exposes a set of interfaces as well to be invoked.
+I will structure the tests considering first a single interface at a time (moving from SIT towards a more E2E like scenario) verifying:
+- input field validations (e.g. missing mandatory field in PATH should provide , upon invocation, with a 400 HTTP code)
+- authorization verification (if any authorization/authentication mechanism is in place)
+- functional positive path (invoke a GET service that upon the correct input fields provides the expected output/payload, and check the validity of the payload data)
+- functional negative path (e.g. invoke a service by providing as input an input that breaks some length validation rules)
+- define a more business/E2E scenario with several different interface invoked in a single flow. Structure the test and validate several steps within the flow
+- Non functional testing (average resp/time of a specific service based on specific load settings....or evaluating an entire flow)
+
+question b)
+i would exetend the answer given in a) with the difference that the mobile devices could be considered as part of cloud or can be simulated. The specific protocol layer (bluetooth) must be considered, but my approach overall would be similar as for the previous question.
+
+Additionally i would as well verify the additional layers within the embedded device (embeded <-> firmware and firmware <-> electronics). Also a more comprehensive verification would extend the concept of E2E and define specific scenarios that tests an entire flow from the mobile device to the embedded device, back to the cloud and so on....
